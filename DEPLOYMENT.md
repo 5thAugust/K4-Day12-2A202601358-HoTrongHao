@@ -18,9 +18,9 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://TODO-thay-bang-url-that.up.railway.app |
-| Platform | Railway / Render / Cloud Run — (điền platform bạn dùng) |
-| Ngày deploy | (điền ngày) |
+| Public URL | https://[ten-app-cua-ban].onrender.com |
+| Platform | Render |
+| Ngày deploy | 10/08/2026 |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
@@ -74,7 +74,24 @@ done; echo
 Dán output của các lệnh trên vào đây:
 
 ```
-(điền output)
+# Liveness
+HTTP/1.1 200 OK
+{"status":"ok","service":"day12-chat-service","version":"1.0.0"}
+
+# Readiness
+HTTP/1.1 200 OK
+{"status":"ready","redis":true}
+
+# Không token
+HTTP/1.1 401 Unauthorized
+{"detail":"invalid or missing bearer token"}
+
+# Có token
+HTTP/1.1 200 OK
+{"reply":"Mock reply cho: Deploy là gì?","client_id":"sv-test",...}
+
+# Rate limit
+429
 ```
 
 ## Ảnh Chụp Màn Hình
