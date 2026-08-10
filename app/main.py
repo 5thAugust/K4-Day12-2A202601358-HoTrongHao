@@ -62,10 +62,7 @@ def get_cost_guard() -> CostGuard:
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     """CHO SẴN — chạy lúc app khởi động và lúc tắt."""
-    try:
-        shutdown_guard.arm()
-    except NotImplementedError:
-        pass  # TODO: Xóa try...except hoặc để nguyên khi làm CP4
+    shutdown_guard.arm()
     emit("service_started", service=SERVICE_NAME, version=SERVICE_VERSION)
     yield
     emit("service_stopped", service=SERVICE_NAME)
