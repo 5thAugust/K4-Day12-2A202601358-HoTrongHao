@@ -18,7 +18,7 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://[ten-app-cua-ban].onrender.com |
+| Public URL | https://k4-day12-2a202601358-hotronghao.onrender.com |
 | Platform | Render |
 | Ngày deploy | 10/08/2026 |
 
